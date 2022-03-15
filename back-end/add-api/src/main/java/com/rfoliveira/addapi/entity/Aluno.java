@@ -17,4 +17,9 @@ public class Aluno {
 
     @Column(nullable = false)
     private LocalDate dataNascimento;
+
+    @ManyToOne
+    @JoinColumn(name = "turma_id")
+    private Turma turma;
+
 }

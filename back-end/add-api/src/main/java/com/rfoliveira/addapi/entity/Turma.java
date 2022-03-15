@@ -18,6 +18,10 @@ public class Turma {
     @Column(nullable = false)
     private int capacidade;
 
-    @OneToMany()
+    @OneToMany(mappedBy = "turma")
     private List<Aluno> alunos;
+
+    @ManyToOne
+    @JoinColumn(name = "escola_id")
+    private Escola escola;
 }
