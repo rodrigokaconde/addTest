@@ -10,7 +10,7 @@ import java.util.List;
 public class Turma {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int Integer;
 
     @Column(nullable = false)
     private String nome;

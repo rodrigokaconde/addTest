@@ -10,12 +10,12 @@ import java.util.List;
 public class Escola {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int Integer;
 
     @Column(nullable = false)
     private String nome;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private Endereco endereco;
 
     @OneToMany(mappedBy = "escola")
