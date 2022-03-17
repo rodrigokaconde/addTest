@@ -10,14 +10,16 @@ import java.util.List;
 public class Escola {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Integer;
+    private Integer id;
 
     @Column(nullable = false)
     private String nome;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    @OneToOne(cascade = {CascadeType.DETACH})
+    @JoinColumn(name = "endereco_id")
     private Endereco endereco;
 
+    //@OneToMany(mappedBy = "escola", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH})
     @OneToMany(mappedBy = "escola")
     private List<Turma> turmas;
 }
