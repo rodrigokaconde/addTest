@@ -1,6 +1,5 @@
 package com.rfoliveira.addapi.service;
 
-import com.rfoliveira.addapi.entity.Aluno;
 import com.rfoliveira.addapi.entity.Turma;
 import com.rfoliveira.addapi.repository.TurmaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
