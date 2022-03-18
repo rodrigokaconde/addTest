@@ -18,8 +18,6 @@ public class Aluno {
     @Column(nullable = false)
     private LocalDate dataNascimento;
 
-    //@ManyToOne(cascade=CascadeType.ALL)
-    //@JoinColumn(name="turma_id", referencedColumnName="id",nullable=false)
     @ManyToOne
     @JoinColumn(name="turma_id")
     private Turma turma;

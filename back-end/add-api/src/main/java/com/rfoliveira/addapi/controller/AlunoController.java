@@ -17,6 +17,7 @@ public class AlunoController {
 
     @PostMapping
     public ResponseEntity<Aluno> createAluno (@RequestBody Aluno aluno){
+        System.out.println(aluno.toString());
         return alunoService.createAluno(aluno);
     }
 

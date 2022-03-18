@@ -15,11 +15,10 @@ public class Escola {
     @Column(nullable = false)
     private String nome;
 
-    @OneToOne(cascade = {CascadeType.DETACH})
+    @OneToOne
     @JoinColumn(name = "endereco_id")
     private Endereco endereco;
 
-    //@OneToMany(mappedBy = "escola", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH})
     @OneToMany(mappedBy = "escola")
     private List<Turma> turmas;
 }

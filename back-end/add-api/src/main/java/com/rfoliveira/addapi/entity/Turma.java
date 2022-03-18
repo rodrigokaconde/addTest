@@ -18,12 +18,9 @@ public class Turma {
     @Column(nullable = false)
     private int capacidade;
 
-    //@OneToMany(mappedBy = "turma", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH})
     @OneToMany(mappedBy = "turma")
     private List<Aluno> alunos;
 
-    //@ManyToOne(cascade=CascadeType.ALL)
-   //@JoinColumn(name="escola_id", referencedColumnName="id",nullable=false)
     @ManyToOne
     @JoinColumn(name="escola_id")
     private Escola escola;
