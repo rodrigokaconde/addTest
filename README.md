@@ -13,6 +13,9 @@
 - Docker
 - PostgreSQL
 
+### Create database
+```docker run --name app-db -d -p 5433:5432 -e POSTGRES_USER=postgres_user -e POSTGRES_PASSWORD=super123 -e POSTGRES_DB=add postgres```
+
 ### Endpoints
 
 #### Escola:
